@@ -5,3 +5,97 @@
 @import "./components/features";
 @import "./components/prefooter";
 @import "./components/footer";
+@import "./components/burger";
+@import "./components/mob-menu";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", "sans-serif";
+  overflow-x: hidden;
+}
+
+.desk-img,
+.mob-img {
+  pointer-events: none;
+
+  &.desk-img {
+    display: none;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $Very-Dark-Blue;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: $Grayish-Violet;
+  line-height: 1.75;
+  font-weight: 500;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.cropper {
+  width: 100vw;
+
+  > * {
+    width: 90vw;
+    max-width: 1750px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .desk-img,
+  .mob-img {
+    display: none;
+
+    &.desk-img {
+      display: block;
+    }
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  header,
+  footer {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cropper {
+    > * {
+      width: 80vw;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+  }
+}
